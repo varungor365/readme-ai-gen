@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "readme-ai-gen"
+version = "1.0.0"
+description = "🤖 Automatically generate trending-optimized, beautiful READMEs for any local codebase using AI."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Varun Ruhella" }]
+keywords = ["git", "ai", "readme", "documentation", "generator", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "rich>=13.0.0",
+    "openai>=1.0.0",
+    "pathspec>=0.11.0",
+    "python-dotenv>=1.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+readme-ai = "readme_ai_gen.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/varungor365/readme-ai-gen"
+Repository = "https://github.com/varungor365/readme-ai-gen"

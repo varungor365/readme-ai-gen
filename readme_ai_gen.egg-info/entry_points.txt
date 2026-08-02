@@ -1,0 +1,2 @@
+[console_scripts]
+readme-ai = readme_ai_gen.cli:main

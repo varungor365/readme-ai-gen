@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+readme_ai_gen/__init__.py
+readme_ai_gen/__main__.py
+readme_ai_gen/ai.py
+readme_ai_gen/cli.py
+readme_ai_gen/scanner.py
+readme_ai_gen.egg-info/PKG-INFO
+readme_ai_gen.egg-info/SOURCES.txt
+readme_ai_gen.egg-info/dependency_links.txt
+readme_ai_gen.egg-info/entry_points.txt
+readme_ai_gen.egg-info/requires.txt
+readme_ai_gen.egg-info/top_level.txt
+tests/test_readme_ai_gen.py
