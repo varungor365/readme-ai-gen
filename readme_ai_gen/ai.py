@@ -1,5 +1,7 @@
 import os
+
 from openai import OpenAI
+
 
 def generate_readme(context: str, project_name: str) -> str:
     """Sends the codebase context to OpenAI to generate a trending-optimized README."""

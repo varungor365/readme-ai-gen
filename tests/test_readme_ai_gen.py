@@ -1,8 +1,7 @@
-import pytest
-from unittest.mock import patch, MagicMock
-from pathlib import Path
-from readme_ai_gen import scanner
-from readme_ai_gen import ai
+from unittest.mock import MagicMock, patch
+
+from readme_ai_gen import ai, scanner
+
 
 def test_get_ignore_spec(tmp_path):
     gitignore = tmp_path / ".gitignore"

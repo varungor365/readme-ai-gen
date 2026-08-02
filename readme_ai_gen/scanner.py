@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
+
 import pathspec
+
 
 def get_ignore_spec(root_dir: Path) -> pathspec.PathSpec:
     """Reads .gitignore and returns a pathspec object. Also adds default ignores."""

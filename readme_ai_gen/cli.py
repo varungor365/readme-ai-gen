@@ -1,16 +1,16 @@
 import argparse
-import sys
 import os
+import sys
 from pathlib import Path
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 from rich.console import Console
 from rich.panel import Panel
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
-from .scanner import scan_directory
-from .ai import generate_readme
 from . import __version__
+from .ai import generate_readme
+from .scanner import scan_directory
 
 console = Console()
 
@@ -60,11 +60,11 @@ def main():
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(readme_content)
             
-        console.print(f"\n[bold green]✅ README successfully generated![/bold green]")
+        console.print("\n[bold green]✅ README successfully generated![/bold green]")
         console.print(f"Saved to: [cyan]{output_path}[/cyan]")
         
-    except Exception as e:
-        console.print(f"\n[red]❌ Error:[/red] {str(e)}")
+    except Exception as e:  # noqa: BLE001
+        console.print(f"\n[red]❌ Error:[/red] {e!s}")
         sys.exit(1)
 
 if __name__ == "__main__":
