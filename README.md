@@ -2,7 +2,7 @@
 
 # 🤖 readme-ai-gen
 
-**Automatically generate trending-optimized, beautiful READMEs for any local codebase using AI.**
+**Generate a practical, reviewable README draft from a local codebase using AI.**
 
 [![PyPI version](https://badge.fury.io/py/readme-ai-gen.svg)](https://badge.fury.io/py/readme-ai-gen)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
@@ -26,13 +26,13 @@ readme-ai
 
 ## ✨ Why this exists
 
-A great README is the difference between 10 stars and 10,000 stars on GitHub. But writing them takes hours of summarizing features, writing quickstarts, and formatting markdown.
+A useful README takes careful work: summarizing the codebase, writing a reproducible quickstart, and documenting limitations without exposing private files.
 
-**readme-ai-gen** solves this by using advanced AI (OpenAI GPT-4o) to scan your entire codebase, understand what your project actually does, and instantly generate a beautifully formatted, SEO-optimized README.
+**readme-ai-gen** scans a local project while respecting `.gitignore`, sends the selected context to the configured model provider, and writes a Markdown draft for human review. It improves the starting point for project documentation; it does not verify that generated claims are true.
 
 ### Features
 - 🧠 **Context-Aware:** Scans your directory structure and file contents (respecting `.gitignore`).
-- 📈 **Trending-Optimized:** Outputs formatting proven to perform well on GitHub (badges, emojis, clear structure).
+- 📝 **Reviewable Markdown:** Produces a structured draft with setup, usage, and project-context sections for maintainers to verify.
 - ⚡ **Extremely Fast:** Generates comprehensive documentation in under 60 seconds.
 - 🛠️ **Zero Config:** Just run `readme-ai` in any directory.
 
@@ -64,6 +64,10 @@ readme-ai /path/to/project -o README.md
 ```
 
 ---
+
+## ⚠️ Privacy and limitations
+
+Review the files and provider settings before running this tool. Project content sent to a hosted model may leave your machine, and `.gitignore` rules are not a substitute for a security review. The generator can miss behavior, invent details, or describe stale dependencies, so validate every command, link, and feature claim before publishing the generated README.
 
 ## 🤖 AI Agent Context
 
